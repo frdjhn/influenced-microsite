@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#INFLUENCED — Infographics</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="home/Influence.png" alt="Influenced Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="infographics.html" aria-current="page">Infographics</a>
+            <a href="dyk.html">DYK?</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn" aria-hidden="true"></div>
+        </div>
+    </header>
+
+    <!-- Infographics Section -->
+    <section class="collection" id="collection">
+        <h1 class="heading">Infographic <span>Series</span></h1>
+
+        <div class="category">
+            <h2 class="sub-heading"></h2>
+            <div class="box-container">
+                <!-- Each box contains one main photo. Use class .infographic-img for click handlers -->
+                <div class="box" data-item="inf1">
+                    <div class="main-photo">
+                        <img class="infographic-img" data-id="inf1" src="info/infographic1.png" alt="Infographic 1">
+                    </div>
+                </div>
+
+                <div class="box" data-item="inf2">
+                    <div class="main-photo">
+                        <img class="infographic-img" data-id="inf2" src="info/infographic2.png" alt="Infographic 2">
+                    </div>
+                </div>
+
+                <div class="box" data-item="inf3">
+                    <div class="main-photo">
+                        <img class="infographic-img" data-id="inf3" src="info/infographic3.png" alt="Infographic 3">
+                    </div>
+                </div>
+
+                <div class="box" data-item="inf4">
+                    <div class="main-photo">
+                        <img class="infographic-img" data-id="inf4" src="info/infographic4.png" alt="Infographic 4">
+                    </div>
+                </div>
+
+                <div class="box" data-item="inf5">
+                    <div class="main-photo">
+                        <img class="infographic-img" data-id="inf5" src="info/infographic5.png" alt="Infographic 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer Section Starts -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-container">
+    <!-- Basic Info -->
+    <div class="footer-col footer-info">
+      <h3 class="footer-title">Talisay City College (TCC)</h3>
+      <address class="footer-address">
+        <div>Industrial Technology Department</div>
+        <div>Bachelor of Industrial Technology – Computer Technology</div>
+        <div>Poblacion, Talisay City, Cebu</div>
+    
+      </address>
+    </div>
+
+    <!-- Quick Links -->
+    <nav class="footer-col footer-links" aria-label="Footer navigation">
+      <h4 class="footer-title">Quick links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="infographics.html">Infographics</a></li>
+        <li><a href="dyk.html">DYK?</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Credits / Academic Info -->
+    <div class="footer-col footer-credits">
+      <h4 class="footer-title">Credits</h4>
+      <p class="muted">Developed by: <strong>Group 3, BIT-CT 4 - Inspire</strong></p>
+      <p class="muted">For: IM 323B – Technology Research 2</p>
+      <p class="muted">Instructor: Mrs. Guia Marie Castañares</p>
+      <p class="muted">Academic Year: 2024–2025</p>
+    </div>
+
+    <!-- Support & Social -->
+    <div class="footer-col footer-support">
+      <h4 class="footer-title">Support & social</h4>
+      <p class="muted">Need help? <a href="contact.html">Contact our team</a>.</p>
+      <p class="muted">This site is optimized for mobile and desktop.</p>
+
+      <div class="social-row" aria-label="Social media links">
+    <a class="social-icon" href="https://www.facebook.com/share/1JuUwUA19G/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.facebook.com/TCCofficialfbpage" target="_blank" aria-label="School Website">
+        <i class="fas fa-school"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright">
+      © 2025 <strong>#INFLUENCED: See Beyond the Algorithm</strong>. All rights reserved.
+    </p>
+
+    <p class="disclaimer">
+      Content is based on the research study “Social Media Algorithms Among College Students: Impact on Purchase Practice” and is not intended as professional advice.
+    </p>
+  </div>
+</footer>
+<!-- Footer Section Ends -->
+
+    <!-- Image Viewer Modal -->
+    <div id="image-viewer" class="image-viewer" aria-hidden="true" role="dialog" aria-label="Image viewer">
+        <div class="viewer-topbar">
+            <button id="viewer-back" class="viewer-btn" aria-label="Close viewer">
+                <i class="fas fa-arrow-left"></i> Go back
+            </button>
+
+            <div class="viewer-actions">
+                <label class="zoom-label" for="zoom-range">Zoom</label>
+                <input id="zoom-range" class="zoom-range" type="range" min="1" max="3" step="0.01" value="1" aria-label="Zoom slider">
+                <a id="download-btn" class="viewer-btn" download aria-label="Download image">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+
+        <div class="viewer-body" id="viewer-body" tabindex="0">
+            <img id="viewer-img" src="" alt="">
+        </div>
+
+        <div class="viewer-footer">
+            <small class="viewer-caption" id="viewer-caption"></small>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>#INFLUENCED — Contact Us</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Your existing styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Small inline styles for feedback messages (keeps CSS file untouched) */
+    .form-message { margin-top: 1rem; font-size: 1.4rem; color: #fff; }
+    .form-message.success { color: #10b981; }
+    .form-message.error { color: #ef4444; }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section Starts -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="home/Influence.png" alt="Influenced Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="infographics.html">Infographics</a>
+            <a href="dyk.html">DYK?</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+
+      <div class="icons">
+          <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+  </header>
+
+  <!-- Contact Section Starts -->
+  <section class="contact" id="contact">
+    <h1 class="heading">contact<span> us</span></h1>
+
+    <div class="row">
+      <!-- Map -->
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125786.24743521638!2d123.75529627730901!3d10.284865883269802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99dadf0cb3aed%3A0x8464eb7a98416a00!2sTalisay%2C%20Cebu!5e0!3m2!1sen!2sph!4v1734085399741!5m2!1sen!2sph"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- Form (wired to your Formspree endpoint) -->
+      <form id="contactForm" action="https://formspree.io/f/mdkbaqpd" method="POST" class="form">
+        <h3>Get in touch</h3>
+
+        <div class="inputBox">
+          <span class="fas fa-user"></span>
+          <input type="text" name="name" id="name" placeholder="Name" required style="text-transform:none;">
+
+        </div>
+
+        <div class="inputBox">
+          <span class="fas fa-envelope"></span>
+          <input type="email" name="email" id="email" placeholder="Email" required style="text-transform:none;">
+
+        </div>
+
+        <div class="inputBox">
+          <span class="fas fa-comment"></span>
+          <textarea name="message" id="message" placeholder="Message" rows="6" required style="text-transform:none;"></textarea>
+
+        </div>
+
+        <!-- Formspree fields: optional subject and redirect -->
+        <input type="hidden" name="_subject" value="New website inquiry — #INFLUENCED">
+        <!-- If you'd rather redirect to a thank-you page, set _next to that page's full URL -->
+        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
+        <input type="submit" value="Submit" class="btn">
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </form>
+    </div>
+
+    
+<section class="products" id="products">
+    <h1 class="heading">Project <span>Team</span></h1>
+
+    <div class="box-container">
+
+        <!-- 1 -->
+        <div class="box">
+            <div class="image">
+                <img src="" alt="Research Adviser">
+            </div>
+            <div class="content" >
+                <h3>Guia Marie Castañares</h3>
+                <div class="price">Research Adviser <span></span></div>
+            </div>
+        </div>
+        
+        <!-- 2 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/cano.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Fred Jhon S. Caño</h3>
+                <div class="price">Research Lead <span></span></div>
+            </div>
+        </div>
+<!-- 4 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/torregosa.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Clint Ramel Torregosa</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/echavez.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Cristine Mae Echavez</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+
+        
+
+        
+
+        <!-- 6 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/prandas.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Clarissa Prandas</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/gabasa.png" alt="">
+            </div>
+            <div class="content" >
+                <h3>Cherrie Ann Gabasa</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+<!-- 5 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/cabando.png" alt="">
+            </div>
+            <div class="content" >
+                <h3>Ryan Cabando</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="box">
+            <div class="image">
+                <img src="contact/barlizo.png" alt="">
+            </div>
+            <div class="content" >
+                <h3>Clifford Dale Barlizo</h3>
+                <div class="price">Research Member <span></span></div>
+            </div>
+        </div>
+
+        
+
+    </div>
+</section>
+<!-- Contact Section Ends -->
+<!-- Company Information Section -->
+<div class="company-info-container" style="text-transform: none;">
+  <div class="company-info" style="text-transform: none;">
+    <h3 style="text-transform: none;">Contact the #INFLUENCED Team</h3>
+    <p style="text-transform: none;"><strong>📍 Poblacion, City of Talisay, Cebu, 6045</strong></p>
+    <p style="text-transform: none;"><strong>📞 Reach us at: +63 960 691 2953</strong></p>
+    <p style="text-transform: none;"><strong>✉️ Email: </strong> 
+      <a href="mailto:canofredjhon@gmail.com" style="text-transform: none;">
+        canofredjhon@gmail.com
+      </a>
+    </p>
+  </div>
+</div>
+<!-- Contact Section Ends -->
+
+
+  
+  <!-- Footer Section Starts -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-container">
+    <!-- Basic Info -->
+    <div class="footer-col footer-info">
+      <h3 class="footer-title">Talisay City College (TCC)</h3>
+      <address class="footer-address">
+        <div>Industrial Technology Department</div>
+        <div>Bachelor of Industrial Technology – Computer Technology</div>
+        <div>Poblacion, Talisay City, Cebu</div>
+
+      </address>
+    </div>
+
+    <!-- Quick Links -->
+    <nav class="footer-col footer-links" aria-label="Footer navigation">
+      <h4 class="footer-title">Quick links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="infographics.html">Infographics</a></li>
+        <li><a href="dyk.html">DYK?</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Credits / Academic Info -->
+    <div class="footer-col footer-credits">
+      <h4 class="footer-title">Credits</h4>
+      <p class="muted">Developed by: <strong>Group 3, BIT-CT 4 - Inspire</strong></p>
+      <p class="muted">For: IM 323B – Technology Research 2</p>
+      <p class="muted">Instructor: Mrs. Guia Marie Castañares</p>
+      <p class="muted">Academic Year: 2024–2025</p>
+    </div>
+
+    <!-- Support & Social -->
+    <div class="footer-col footer-support">
+      <h4 class="footer-title">Support & social</h4>
+      <p class="muted">Need help? <a href="contact.html">Contact our team</a>.</p>
+      <p class="muted">This site is optimized for mobile and desktop.</p>
+
+      <div class="social-row" aria-label="Social media links">
+    <a class="social-icon" href="https://www.facebook.com/share/1JuUwUA19G/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.facebook.com/TCCofficialfbpage" target="_blank" aria-label="School Website">
+        <i class="fas fa-school"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright">
+      © 2025 <strong>#INFLUENCED: See Beyond the Algorithm</strong>. All rights reserved.
+    </p>
+
+    <p class="disclaimer">
+      Content is based on the research study “Social Media Algorithms Among College Students: Impact on Purchase Practice” and is not intended as professional advice.
+    </p>
+  </div>
+</footer>
+<!-- Footer Section Ends -->
+
+
+  <!-- lightweight JS submit handler for Formspree -->
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        formMessage.textContent = '';
+        formMessage.className = 'form-message';
+
+        const endpoint = form.action; // your Formspree endpoint
+        const data = new FormData(form);
+
+        // Basic client-side validation (required attributes already present)
+        const name = data.get('name').trim();
+        const email = data.get('email').trim();
+        const message = data.get('message').trim();
+
+        if (!name || !email || !message) {
+          formMessage.textContent = 'Please fill in all required fields.';
+          formMessage.classList.add('error');
+          return;
+        }
+
+        try {
+          // Show temporary submitting state
+          const submitBtn = form.querySelector('input[type="submit"]');
+          submitBtn.disabled = true;
+          submitBtn.value = 'Sending...';
+
+          const resp = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data
+          });
+
+          if (resp.ok) {
+            // success
+            formMessage.textContent = 'Message sent — thank you! We will get back to you soon.';
+            formMessage.classList.add('success');
+            form.reset();
+          } else {
+            // error response
+            const err = await resp.json().catch(() => ({}));
+            const messageText = err.error || 'Unable to send message. Please try again later.';
+            formMessage.textContent = messageText;
+            formMessage.classList.add('error');
+          }
+        } catch (error) {
+          formMessage.textContent = 'Network error. Please check your connection and try again.';
+          formMessage.classList.add('error');
+        } finally {
+          const submitBtn = form.querySelector('input[type="submit"]');
+          submitBtn.disabled = false;
+          submitBtn.value = 'Submit';
+        }
+      });
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>#INFLUENCED — Quiz</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- site style -->
+  <link rel="stylesheet" href="style.css">
+  <!-- quiz-specific style -->
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="home/Influence.png" alt="Influenced Logo">
+    </a>
+    <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="infographics.html">Infographics</a>
+            <a href="dyk.html">DYK?</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="contact.html">Contact</a>
+            
+        </nav>
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+  </header>
+
+  <!-- Intro / About -->
+  <section class="about" id="about">
+    <h1 class="heading"><span>#Influenced</span> Quiz</h1>
+
+    <div class="row">
+      <div class="content">
+        <h3>Are You <span>#INFLUENCED</span>?</h3>
+        <p>
+          Discover how much social media algorithms and influencer content shape the way you shop.
+          This quick 10-item quiz presents one question at a time — choose the option that best matches your usual behavior.
+        </p>
+
+        <br><h3>How it works</h3>
+        <p>
+          Each response adds to an internal score (0–30). Your final score places you in a <strong>Low</strong>, <strong>Moderate</strong>, or <strong>High</strong> influence category.
+          This quiz is adapted from a validated student survey and research on digital consumer behavior.
+        </p>
+
+        <p>Ready to find out where you stand?</p>
+
+        <!-- CTA opens modal quiz -->
+        <button id="startQuizBtn" class="cta-quiz" type="button" aria-haspopup="dialog" aria-controls="quizModal">
+          Take the quiz
+        </button>
+      </div>
+
+      <div class="image">
+        <img src="home/Influence Logo.png" alt="Logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Quiz -->
+  <!-- NOTE: we keep "hidden" attribute initially for accessibility, but JS will explicitly set style.display -->
+  <div id="quizModal" class="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quiz-title" hidden>
+    <div class="quiz-overlay" id="quizOverlay" tabindex="-1" aria-hidden="true"></div>
+
+    <div class="quiz-modal-content" role="document" aria-describedby="quiz-desc">
+      <button class="quiz-modal-close" id="closeQuizBtn" aria-label="Close quiz">&times;</button>
+
+      <div class="modal-header" style="text-align:center;margin-bottom:8px;color:#fff">
+        <h2 id="quiz-title" style="margin:0;font-size:2rem">Are You <strong>#INFLUENCED?</strong></h2>
+        <div id="quiz-desc" style="color:var(--muted);margin-top:6px">10 items — one question at a time</div>
+      </div>
+
+      <main class="quiz-wrap" id="quizArea" aria-live="polite">
+        <div class="quiz-card" id="quizCard" role="application" aria-labelledby="quiz-title">
+          <div class="progress" aria-hidden="true"><i id="progressBar" style="width:0%"></i></div>
+
+          <div class="flashcard" id="flashcard" aria-live="polite">
+            <div class="q-number" id="qNumber">Question 1 of 10</div>
+            <div class="q-text" id="qText">Loading…</div>
+
+            <div class="options" id="options" role="list"></div>
+
+            <div class="hint" id="hint" style="color:var(--muted);font-size:1.05rem"></div>
+          </div>
+
+          <div class="controls" aria-hidden="true">
+            <div class="left">
+              <button id="prevBtn" class="btn-ghost" aria-label="Previous question">Previous</button>
+              <button id="nextBtn" class="btn-ghost" aria-label="Next question" disabled>Next</button>
+            </div>
+            <div class="right">
+              <button id="resetBtn" class="btn-ghost">Reset</button>
+              <button id="submitBtn" class="btn-primary" disabled>Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-panel" id="resultPanel" style="display:none;">
+          <div>
+            <div class="score">Your Score: <span id="scoreVal">0</span>/30</div>
+            <div style="margin-top:8px;">
+              <span id="levelBadge" class="level level-low">Low</span>
+            </div>
+
+            <div id="meaning" style="margin-top:14px;color:var(--muted);font-size:1.15rem"></div>
+
+            <div style="margin-top:12px;">
+              <h3 style="margin:0 0 8px;color:#fff">Recommendations</h3>
+              <ul class="recs" id="recommendations"></ul>
+            </div>
+
+            <div style="margin-top:16px;display:flex;gap:10px;align-items:center">
+              <button id="retakeBtn" class="btn-primary">Retake Quiz</button>
+              <button id="closeResultBtn" class="btn-ghost" style="margin-left:auto">Close</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer Section Starts -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-container">
+    <!-- Basic Info -->
+    <div class="footer-col footer-info">
+      <h3 class="footer-title">Talisay City College (TCC)</h3>
+      <address class="footer-address">
+        <div>Industrial Technology Department</div>
+        <div>Bachelor of Industrial Technology – Computer Technology</div>
+        <div>Poblacion, Talisay City, Cebu</div>
+      
+      </address>
+    </div>
+
+    <!-- Quick Links -->
+    <nav class="footer-col footer-links" aria-label="Footer navigation">
+      <h4 class="footer-title">Quick links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="infographics.html">Infographics</a></li>
+        <li><a href="dyk.html">DYK?</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Credits / Academic Info -->
+    <div class="footer-col footer-credits">
+      <h4 class="footer-title">Credits</h4>
+      <p class="muted">Developed by: <strong>Group 3, BIT-CT 4 - Inspire</strong></p>
+      <p class="muted">For: IM 323B – Technology Research 2</p>
+      <p class="muted">Instructor: Mrs. Guia Marie Castañares</p>
+      <p class="muted">Academic Year: 2024–2025</p>
+    </div>
+
+    <!-- Support & Social -->
+    <div class="footer-col footer-support">
+      <h4 class="footer-title">Support & social</h4>
+      <p class="muted">Need help? <a href="contact.html">Contact our team</a>.</p>
+      <p class="muted">This site is optimized for mobile and desktop.</p>
+
+      <div class="social-row" aria-label="Social media links">
+    <a class="social-icon" href="https://www.facebook.com/share/1JuUwUA19G/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.facebook.com/TCCofficialfbpage" target="_blank" aria-label="School Website">
+        <i class="fas fa-school"></i>
+    </a>
+
+    <a class="social-icon" href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright">
+      © 2025 <strong>#INFLUENCED: See Beyond the Algorithm</strong>. All rights reserved.
+    </p>
+
+    <p class="disclaimer">
+      Content is based on the research study “Social Media Algorithms Among College Students: Impact on Purchase Practice” and is not intended as professional advice.
+    </p>
+  </div>
+</footer>
+<!-- Footer Section Ends -->
+
+   <script src="script.js"></script>
+</body>
+</html>
